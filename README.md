@@ -19,6 +19,24 @@ The project focuses on correctness, data integrity, iteration without heap alloc
 
 ---
 
+## Motivation
+
+I built K-9 to deepen my understanding of how storage engines operate beneath modern databases and to practice Rust in a real, low-level context.  
+Rust's ownership model, its focus on safety without sacrificing performance, and its strong support for zero-copy patterns make it an ideal language for implementing binary formats and storage systems.
+
+The goal was to implement the core components manually:
+
+- a custom binary serialization format,
+- explicit deserialization and parsing logic,
+- CRC32-based integrity checking,
+- and a persistent on-disk layout.
+
+This project allowed me to apply Rust’s systems programming concepts in practice and gain hands-on experience with file I/O, memory handling, and robust error management.  
+K-9 is intentionally compact, but it demonstrates core ideas found in real-world databases and embedded storage engines.
+
+
+---
+
 ## Why “K-9”?
 The project is named **K-9** because it behaves a bit like a quick retrieval dog.  
 You throw data at it, and it fetches it back **fast**, **reliably**, and without hesitation.  
