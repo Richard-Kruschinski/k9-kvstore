@@ -8,7 +8,7 @@ Just like a trained K-9 unit, our key-value store stays focused, efficient, and 
 At its core, K-9 is a **log-structured key-value store** written in Rust.  
 On top of that storage engine, we are building a **terminal-based Notes application** using **ratatui**.
 
-# What this project is (Lab9)
+# What this project is
 
 This repository contains two layers:
 
@@ -36,8 +36,19 @@ cargo run --bin notes_cli -- notes.db new "Titel 2" "Body 2"
 
 # Run the TUI
 
+auto detect OS (Windows → notepad, Linux → nano):
 ```bash
 cargo run --bin notes_tui
+```
+
+Explicit Winodows mode:
+```bash
+cargo run --bin notes_tui notes.db windows 
+```
+
+Explicit Linux mode:
+```bash
+cargo run --bin notes_tui notes.db linux
 ```
 
 Press `q` to quit.
